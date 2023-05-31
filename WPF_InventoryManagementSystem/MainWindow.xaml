@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_InventoryManagementSystem"
         xmlns:viewModel="clr-namespace:WPF_InventoryManagementSystem.MVVM.ViewModel"
         mc:Ignorable="d"
-        Height="600" Width="920"
+        Height="555" Width="920"
         WindowStyle="None"
         ResizeMode="CanMinimize"
         Background="Transparent"

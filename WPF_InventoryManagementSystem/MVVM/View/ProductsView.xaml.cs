@@ -21,5 +21,6 @@ namespace WPF_InventoryManagementSystem.MVVM.View {
         public ProductsView() {
             InitializeComponent();
         }
+
     }
 }

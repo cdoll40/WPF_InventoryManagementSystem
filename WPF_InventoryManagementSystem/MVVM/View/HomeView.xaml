@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_InventoryManagementSystem.MVVM.View"
+             xmlns:viewModel="clr-namespace:WPF_InventoryManagementSystem.MVVM.ViewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="460" d:DesignWidth="800">
+             d:DesignHeight="460" d:DesignWidth="700">
+
+    <UserControl.DataContext>
+        <viewModel:CategoriesViewModel/>
+    </UserControl.DataContext>
 
     <StackPanel>
 
@@ -91,22 +96,162 @@
                         Height="150"
                         Background="#FF3D3B4E"
                         CornerRadius="10"
-                        Margin="0"/>
+                        Margin="0">
+
+                    <StackPanel Margin="10">
+
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Category ID: " />
+                            <Run Text="{Binding CategoriesDataList[0].CategoryId}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Name: " />
+                            <Run Text="{Binding CategoriesDataList[0].CategoryName}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="No. of Products: " />
+                            <Run Text="{Binding CategoriesDataList[0].TotalCount}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Total Count: " />
+                            <Run Text="{Binding CategoriesDataList[0].ProductCount}" />
+                        </TextBlock>
+
+                    </StackPanel>
+                    
+                </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#FF3D3B4E"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+
+                    <StackPanel Margin="10">
+
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Category ID: " />
+                            <Run Text="{Binding CategoriesDataList[1].CategoryId}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Name: " />
+                            <Run Text="{Binding CategoriesDataList[1].CategoryName}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="No. of Products: " />
+                            <Run Text="{Binding CategoriesDataList[1].TotalCount}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Total Count: " />
+                            <Run Text="{Binding CategoriesDataList[1].ProductCount}" />
+                        </TextBlock>
+
+                    </StackPanel>
+
+                </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#FF3D3B4E"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+
+                    <StackPanel Margin="10">
+
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Category ID: " />
+                            <Run Text="{Binding CategoriesDataList[2].CategoryId}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Name: " />
+                            <Run Text="{Binding CategoriesDataList[2].CategoryName}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="No. of Products: " />
+                            <Run Text="{Binding CategoriesDataList[2].TotalCount}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Total Count: " />
+                            <Run Text="{Binding CategoriesDataList[2].ProductCount}" />
+                        </TextBlock>
+
+                    </StackPanel>
+
+                </Border>
 
                 <Border Width="150"
                         Height="150"
                         Background="#FF3D3B4E"
-                        CornerRadius="10"/>
+                        CornerRadius="10">
+
+                    <StackPanel Margin="10">
+
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Category ID: " />
+                            <Run Text="{Binding CategoriesDataList[3].CategoryId}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Name: " />
+                            <Run Text="{Binding CategoriesDataList[3].CategoryName}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="No. of Products: " />
+                            <Run Text="{Binding CategoriesDataList[3].TotalCount}" />
+                        </TextBlock>
+                        <TextBlock Foreground="White"
+                                   FontSize="14"
+                                   HorizontalAlignment="Left"
+                                   Margin="0,0,0,10">
+                            <Run Text="Total Count: " />
+                            <Run Text="{Binding CategoriesDataList[3].ProductCount}" />
+                        </TextBlock>
+
+                    </StackPanel>
+
+                </Border>
 
             </StackPanel>
 

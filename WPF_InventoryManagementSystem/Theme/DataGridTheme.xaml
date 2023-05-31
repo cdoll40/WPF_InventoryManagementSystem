@@ -4,12 +4,14 @@
     <Style TargetType="DataGrid"
            x:Key="DataGridTheme">
 
-        <Setter Property="BorderBrush" Value="DarkGray" />
+        <Setter Property="BorderBrush" Value="#FF3D3B4E" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Background" Value="White" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="RowBackground" Value="Transparent" />
         <Setter Property="AlternatingRowBackground" Value="#22202f" />
         <Setter Property="Foreground" Value="White" />
+        <Setter Property="HorizontalGridLinesBrush" Value="#FF3D3B4E" />
+        <Setter Property="VerticalGridLinesBrush" Value="#FF3D3B4E" />
 
     </Style>
 
