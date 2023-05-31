@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="WPF_InventoryManagementSystem.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_InventoryManagementSystem.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="800">
+
+    <StackPanel>
+
+        <TextBlock Text="Home"
+                   Foreground="White"
+                   FontSize="28"
+                   Height="35"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Margin="0,0,0,10">
+
+            <Border Width="400" Height="200" Background="#FF3D3B4E">
+
+                
+
+                <!--USE THIS INSTEAD OF CORNER RADIUS WHEN USING IMAGE-->
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10"
+                                       RadiusY="10"
+                                       Rect="0,0,400,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+
+                        <TextBlock Text="Grocery Inc&#x0a;Great Groceries"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   Margin="20,10,10,0"/>
+
+                        <TextBlock Text="Fresh groceries stay stocked!"
+                                   Foreground="White"
+                                   FontSize="18"
+                                   Margin="20,10,10,0"/>
+
+                    </StackPanel>
+
+                    <!--USE THIS TO ADD AN IMAGE-->
+                    <!--<Image Width="250"
+                           Height="250"
+                           Source="/Images/man.png"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom"/>-->
+
+                </Grid>
+
+            </Border>
+
+            <Border Width="200"
+                    Height="200"
+                    CornerRadius="10"
+                    Margin="45,0,0,0"
+                    Background="#FF3D3B4E">
+
+                <TextBlock Text="Calender?"
+                           Foreground="White"
+                           FontSize="28"
+                           Margin="20,10,10,0"/>
+
+            </Border>
+
+        </StackPanel>
+
+        <StackPanel>
+
+            <TextBlock Text="Inventory Quick View"
+                   Foreground="White"
+                   FontSize="20"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal">
+
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Margin" Value="15,0,0,0"/>
+                    </Style>
+                </StackPanel.Resources>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#FF3D3B4E"
+                        CornerRadius="10"
+                        Margin="0"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#FF3D3B4E"
+                        CornerRadius="10"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#FF3D3B4E"
+                        CornerRadius="10"/>
+
+                <Border Width="150"
+                        Height="150"
+                        Background="#FF3D3B4E"
+                        CornerRadius="10"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </StackPanel>
+
+</UserControl>
