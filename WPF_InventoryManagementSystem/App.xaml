@@ -13,6 +13,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/InvButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DataGridTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
@@ -21,6 +22,14 @@
 
             <DataTemplate DataType="{x:Type viewModel:InventoryViewModel}">
                 <view:InventoryView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:CategoriesViewModel}">
+                <view:CategoriesView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ProductsViewModel}">
+                <view:ProductsView/>
             </DataTemplate>
 
         </ResourceDictionary>    

@@ -4,8 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_InventoryManagementSystem.MVVM.View"
+             xmlns:viewModel="clr-namespace:WPF_InventoryManagementSystem.MVVM.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="460" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:MainInvViewModel/>
+    </UserControl.DataContext>
 
     <StackPanel>
 
@@ -14,6 +19,7 @@
                              Height="35"
                              Foreground="White"
                              FontSize="14"
+                         Command="{Binding CategoriesViewCommand}"
                              Style="{StaticResource InvButtonTheme}"
                              IsChecked="True"/>
 
@@ -21,8 +27,38 @@
                              Height="35"
                              Foreground="White"
                              FontSize="14"
+                         Command="{Binding ProductsViewCommand}"
                              Style="{StaticResource InvButtonTheme}"/>
         </StackPanel>
+
+        <ContentControl Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+        <!--<DataGrid x:Name="categoriesDataGrid" 
+                   AutoGenerateColumns="False" 
+                   ItemsSource="{Binding CategoriesDataList}" 
+                   IsReadOnly="True"
+                  Style="{StaticResource DataGridTheme}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Category ID" 
+                                    Width="120"
+                                    Binding="{Binding CategoryId}" 
+                                    IsReadOnly="{Binding IsCategoriesReadOnly}" />
+                <DataGridTextColumn Header="Category Name" 
+                                    Width="120"
+                                    Binding="{Binding CategoryName}" 
+                                    IsReadOnly="{Binding IsCategoriesReadOnly}" />
+                <DataGridTextColumn Header="Product Count" 
+                                    Width="120"
+                                    Binding="{Binding ProductCount, Mode=TwoWay}" 
+                                    IsReadOnly="{Binding IsCategoriesReadOnly}" />
+                <DataGridTextColumn Header="Total Count" 
+                                    Width="120"
+                                    Binding="{Binding TotalCount, Mode=TwoWay}" 
+                                    IsReadOnly="{Binding IsCategoriesReadOnly}" />
+            </DataGrid.Columns>
+        </DataGrid>-->
 
     </StackPanel>
     
