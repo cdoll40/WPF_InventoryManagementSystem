@@ -14,8 +14,11 @@
 
     <StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-            <RadioButton Content="Categories"
+        <Border BorderBrush="#FF3D3B4E"
+                BorderThickness="0,0,0,1"
+                Margin="0,0,0,20">
+            <StackPanel Orientation="Horizontal" >
+                <RadioButton Content="Categories"
                              Height="35"
                              Foreground="White"
                              FontSize="14"
@@ -23,17 +26,17 @@
                              Style="{StaticResource InvButtonTheme}"
                              IsChecked="True"/>
 
-            <RadioButton Content="Products"
+                <RadioButton Content="Products"
                              Height="35"
                              Foreground="White"
                              FontSize="14"
                          Command="{Binding ProductsViewCommand}"
                              Style="{StaticResource InvButtonTheme}"/>
-        </StackPanel>
+            </StackPanel>
+        </Border>
 
-        <ContentControl Grid.Column="1"
-                            Margin="10"
-                            Content="{Binding CurrentView}"/>
+        <ContentControl Margin="10"
+                        Content="{Binding CurrentView}"/>
 
         <!--<DataGrid x:Name="categoriesDataGrid" 
                    AutoGenerateColumns="False" 

@@ -65,13 +65,20 @@
                     Height="200"
                     CornerRadius="10"
                     Margin="45,0,0,0"
-                    Background="#FF3D3B4E">
+                    Background="#FF3D3B4E"> 
+                <Border Background="White"
+                        Width="180"
+                        Height="180"
+                        CornerRadius="10">
 
-                <TextBlock Text="Calender?"
-                           Foreground="White"
-                           FontSize="28"
-                           Margin="20,10,10,0"/>
+                    <Calendar HorizontalAlignment="Stretch"
+                                  VerticalAlignment="Stretch"
+                                  Background="Transparent"
+                                  BorderThickness="0" 
+                                  VerticalContentAlignment="Center" 
+                                  HorizontalContentAlignment="Center"/>
 
+                </Border>
             </Border>
 
         </StackPanel>

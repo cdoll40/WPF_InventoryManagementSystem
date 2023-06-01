@@ -12,11 +12,15 @@
         <Setter Property="Foreground" Value="White" />
         <Setter Property="HorizontalGridLinesBrush" Value="#FF3D3B4E" />
         <Setter Property="VerticalGridLinesBrush" Value="#FF3D3B4E" />
+        <Setter Property="RowHeight" Value="30" />
+        <Setter Property="MaxHeight" Value="300" />
+        <Setter Property="FontSize" Value="14" />
 
     </Style>
 
     <Style TargetType="DataGridColumnHeader">
         <Setter Property="Background" Value="#22202f" />
+        <Setter Property="Height" Value="25" />
     </Style>
 
 </ResourceDictionary>

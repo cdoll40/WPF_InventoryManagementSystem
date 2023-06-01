@@ -19,8 +19,7 @@
 
     <StackPanel>
 
-    <DataGrid Grid.Row="3" 
-              x:Name="productsDataGrid" 
+    <DataGrid x:Name="productsDataGrid" 
               AutoGenerateColumns="False" 
               ItemsSource="{Binding ProductsDataList}" 
               IsReadOnly="{Binding IsProductsReadOnly}" 
@@ -47,8 +46,23 @@
     </DataGrid>
 
     <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="10">
-            <Button Margin="10" Content="Enable Editing" Command="{Binding EnableEditingCommand}" />
-            <Button Margin="10" Content="Save Changes" Command="{Binding SaveChangesCommand}" Visibility="{Binding IsEditingEnabled, Converter={StaticResource BooleanToVisibilityConverter}}" />
+            <Button Margin="10" 
+                    Content="Edit" 
+                    Width="115"
+                    Height="35"
+                    BorderBrush="#FF3D3B4E"
+                    FontSize="14"
+                    Style="{StaticResource ButtonHoverTheme}"
+                    Command="{Binding EnableEditingCommand}" />
+            <Button Margin="10" 
+                    Content="Save" 
+                    Width="115"
+                    Height="35"
+                    BorderBrush="#FF3D3B4E"
+                    FontSize="14"
+                    Style="{StaticResource ButtonHoverTheme}"
+                    Command="{Binding SaveChangesCommand}" 
+                    Visibility="{Binding IsEditingEnabled, Converter={StaticResource BooleanToVisibilityConverter}}" />
     </StackPanel>
 
     </StackPanel>
