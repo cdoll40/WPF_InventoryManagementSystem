@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_InventoryManagementSystem.Core;
 
 namespace WPF_InventoryManagementSystem.MVVM.View {
     /// <summary>
@@ -21,5 +22,6 @@ namespace WPF_InventoryManagementSystem.MVVM.View {
         public InventoryView() {
             InitializeComponent();
         }
+
     }
 }

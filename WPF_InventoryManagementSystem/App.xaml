@@ -25,6 +25,10 @@
                 <view:InventoryView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:PrintViewModel}">
+                <view:PrintView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:CategoriesViewModel}">
                 <view:CategoriesView/>
             </DataTemplate>

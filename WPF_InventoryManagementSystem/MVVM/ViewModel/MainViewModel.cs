@@ -9,10 +9,12 @@ namespace WPF_InventoryManagementSystem.MVVM.ViewModel {
     internal class MainViewModel : ObservableObject {
 
         public RelayCommand HomeViewCommand { get; set; }
-        public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand InventoryViewCommand { get; set; }
+        public RelayCommand PrintViewCommand { get; set; }
 
         public HomeViewModel HomeVM { get; set; }
-        public InventoryViewModel DiscoveryVM { get; set; }
+        public InventoryViewModel InventoryVM { get; set; }
+        public PrintViewModel PrintVM { get; set; }
 
         private object _currentView;
 
@@ -27,7 +29,8 @@ namespace WPF_InventoryManagementSystem.MVVM.ViewModel {
         public MainViewModel() {
 
             HomeVM = new HomeViewModel();
-            DiscoveryVM = new InventoryViewModel();
+            InventoryVM = new InventoryViewModel();
+            PrintVM = new PrintViewModel();
 
             CurrentView = HomeVM;
 
@@ -35,8 +38,12 @@ namespace WPF_InventoryManagementSystem.MVVM.ViewModel {
                 CurrentView = HomeVM;
             });
 
-            DiscoveryViewCommand = new RelayCommand(o => {
-                CurrentView = DiscoveryVM;
+            InventoryViewCommand = new RelayCommand(o => {
+                CurrentView = InventoryVM;
+            });
+
+            PrintViewCommand = new RelayCommand(o => {
+                CurrentView = PrintVM;
             });
         }
     }

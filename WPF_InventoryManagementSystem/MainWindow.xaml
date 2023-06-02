@@ -112,13 +112,14 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
-                             Command="{Binding DiscoveryViewCommand}"/>
+                             Command="{Binding InventoryViewCommand}"/>
 
-                <RadioButton Content="History"
+                <RadioButton Content="Print"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding PrintViewCommand}"/>
 
             </StackPanel>
 

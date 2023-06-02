@@ -18,6 +18,8 @@ namespace WPF_InventoryManagementSystem.MVVM.View {
     /// Interaction logic for ProductsView.xaml
     /// </summary>
     public partial class ProductsView : UserControl {
+
+
         public ProductsView() {
             InitializeComponent();
         }
