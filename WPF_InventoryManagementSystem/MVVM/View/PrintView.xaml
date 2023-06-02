@@ -12,49 +12,86 @@
         <viewModel:ProductsViewModel/>
     </UserControl.DataContext>
 
-    <Grid Background="White">
+    <Grid>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="160"/>
         </Grid.RowDefinitions>
 
-        <!-- Header section -->
-        <StackPanel Grid.Row="0" Margin="10">
+        <Grid Grid.Row="0"
+              Background="White">
             
-            <TextBlock Text="Inventory Management System" 
-                       FontSize="20" 
-                       FontWeight="Bold"/>
-            
-            <TextBlock Margin="0,10,0,0"
-                       FontSize="14">
-                <Run Text="Date: " />
-                <Run Text="{Binding CurrentDateTime}" />
-            </TextBlock>
-        
-        </StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <!-- Data section -->
-        <DataGrid Grid.Row="1" 
-                  x:Name="categoriesDataGrid" 
-                  AutoGenerateColumns="True" 
-                  Margin="10"
-                  IsReadOnly="True"
-                  Background="White"
-                  ItemsSource="{Binding CategoriesDataList}"
-                  RowHeight="25"
-                  BorderBrush="Black"
-                  BorderThickness="1"
-                  RowHeaderWidth="0"
-                  MinColumnWidth="120">
-            <DataGrid.Resources>
-                <Style TargetType="{x:Type DataGridColumnHeader}">
-                    <Setter Property="Background" Value="White"/>
-                    <Setter Property="Height" Value="25" />
-                    <Setter Property="BorderBrush" Value="Black" />
-                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
-                </Style>
-            </DataGrid.Resources>
-        </DataGrid>
+            <!-- Header section -->
+            <StackPanel Grid.Row="0" Margin="10">
+
+                <TextBlock Text="Inventory Management System" 
+                               FontSize="20" 
+                               FontWeight="Bold"/>
+
+                <TextBlock Margin="0,10,0,0"
+                               FontSize="14">
+                        <Run Text="Date: " />
+                        <Run Text="{Binding CurrentDateTime}" />
+                </TextBlock>
+
+            </StackPanel>
+
+            <!-- Data section -->
+            <DataGrid Grid.Row="1" 
+                          x:Name="categoriesDataGrid" 
+                          AutoGenerateColumns="True" 
+                          Margin="10"
+                          IsReadOnly="True"
+                          Background="White"
+                          ItemsSource="{Binding CategoriesDataList}"
+                          RowHeight="25"
+                          BorderBrush="Black"
+                          BorderThickness="1"
+                          RowHeaderWidth="0"
+                          MinColumnWidth="120">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="White"/>
+                        <Setter Property="Height" Value="25" />
+                        <Setter Property="BorderBrush" Value="Black" />
+                        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
+
+            <TextBlock Grid.Row="2"
+                       Text="Test"/>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+
+            <TextBox Width="350"
+                     Height="90"
+                     Margin="10"
+                     Background="#FF3D3B4E"
+                     Foreground="White"
+                     Text="Comments..."
+                     VerticalAlignment="Top"
+                     HorizontalAlignment="Center"/>
+
+            <Button Margin="10" 
+                    Content="Print" 
+                    Width="115"
+                    Height="35"
+                    BorderBrush="#FF3D3B4E"
+                    FontSize="14"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Style="{StaticResource ButtonHoverTheme}"/>
+        </Grid>
 
     </Grid>
 
